@@ -1,0 +1,107 @@
+<section class="contact-section py-5">
+  <div class="container">
+    <h2 class="section-title text-center mb-5">Contact Me</h2>
+
+    <div class="row g-4">
+
+      <!-- Contact Form -->
+      <div class="col-md-7">
+        <div class="contact-card">
+          <h4 class="fw-bold mb-4 text-center">Get In Touch</h4>
+
+          <!-- UPDATED FORM -->
+          <form (ngSubmit)="submitForm()" #form="ngForm">
+
+            <div class="mb-3">
+              <label for="name" class="form-label">Name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="name"
+                placeholder="Your Name"
+                required
+                [(ngModel)]="formData.name"
+                name="name"
+              >
+            </div>
+
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                placeholder="Your Email"
+                required
+                [(ngModel)]="formData.email"
+                name="email"
+              >
+            </div>
+
+            <div class="mb-3">
+              <label for="subject" class="form-label">Subject</label>
+              <input
+                type="text"
+                class="form-control"
+                id="subject"
+                placeholder="Subject"
+                required
+                [(ngModel)]="formData.subject"
+                name="subject"
+              >
+            </div>
+
+            <div class="mb-3">
+              <label for="message" class="form-label">Message</label>
+              <textarea
+                class="form-control"
+                id="message"
+                rows="5"
+                placeholder="Your Message"
+                required
+                [(ngModel)]="formData.message"
+                name="message"
+              ></textarea>
+            </div>
+
+            <div class="text-center">
+              <button type="submit" class="btn btn-primary btn-lg px-4" [disabled]="isLoading">
+                {{ isLoading ? 'Sending...' : 'Send Message' }}
+              </button>
+            </div>
+
+            <!-- SUCCESS MESSAGE -->
+            <div *ngIf="successMsg" class="alert alert-success mt-3 text-center">
+              {{ successMsg }}
+            </div>
+
+            <!-- ERROR MESSAGE -->
+            <div *ngIf="errorMsg" class="alert alert-danger mt-3 text-center">
+              {{ errorMsg }}
+            </div>
+
+          </form>
+        </div>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="col-md-5">
+        <div class="contact-card contact-info">
+          <h4 class="fw-bold mb-4 text-center">Contact Info</h4>
+
+          <p><b>Email:</b> <a href="mailto:dnyaneshwarkokatevip@gmail.com">dnyaneshwarkokatevip&#64;gmail.com</a></p>
+          <p><b>Phone:</b> <a href="tel:+919021852833">+91 9021852833</a></p>
+          <p><b>Location:</b> Pune, India</p>
+
+          <h5 class="fw-bold mt-4 text-center">Follow Me</h5>
+          <div class="social-links d-flex justify-content-center gap-3 mt-2">
+            <a href="https://github.com/Dnyanesh0902" target="_blank">GitHub</a>
+            <a href="https://in.linkedin.com/in/dnyaneshwar-kokate-04a12b258" target="_blank">LinkedIn</a>
+            <a href="https://www.instagram.com/dnyanesh_kokate_009" target="_blank">Instagram</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

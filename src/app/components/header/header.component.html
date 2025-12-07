@@ -1,0 +1,32 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm py-3">
+  <div class="container">
+    <!-- Logo / Brand -->
+    <a class="navbar-brand fw-bold fs-3 text-primary" routerLink="/">Dnyanesh Kokate</a>
+    <!-- Toggler for mobile -->
+       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    <!-- Navbar links -->
+    <div class="collapse navbar-collapse" id="navbarNav" #navbarCollapse>
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link fw-semibold fs-5" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
+             (click)="closeNavbar()">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fw-semibold fs-5" routerLink="/about" routerLinkActive="active"
+             (click)="closeNavbar()">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fw-semibold fs-5" routerLink="/projects" routerLinkActive="active"
+             (click)="closeNavbar()">Projects</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fw-semibold fs-5" routerLink="/contact" routerLinkActive="active"
+             (click)="closeNavbar()">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

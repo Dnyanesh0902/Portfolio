@@ -1,0 +1,109 @@
+.projects-section {
+  background: #f8f9fa;
+  padding: 60px 0;
+}
+
+/* Section Title */
+.section-title {
+  color: #007bff;
+  font-weight: 700;
+  font-size: 32px;
+  margin-bottom: 50px;
+  animation: slideDown 1s ease forwards;
+  text-align: center;
+}
+
+/* Row Flex for Equal Height Cards */
+.row.g-4 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0px;
+}
+
+.col-md-4 {
+  display: flex;
+}
+
+/* Project Card */
+.project-card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+}
+
+/* Project Image */
+.project-img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.project-card:hover .project-img {
+  transform: scale(1.05);
+}
+
+/* Project Info */
+.project-info {
+  padding: 20px;
+  flex: 1; /* Stretch info to fill card */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center; /* Center the text */
+}
+
+/* Project Title */
+.project-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #007bff;
+}
+
+/* Project Description */
+.project-desc {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+/* Project Links */
+.project-links {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: auto; /* Push links to bottom */
+}
+
+.project-links a {
+  font-size: 13px;
+  padding: 6px 14px;
+  border-radius: 6px;
+  text-decoration: none;
+  background: #007bff;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.project-links a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  background: #0056b3;
+}
+
+/* Animations */
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-20px);}
+  to { opacity: 1; transform: translateY(0);}
+}
